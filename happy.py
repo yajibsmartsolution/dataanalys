@@ -511,7 +511,7 @@ else:
         st.metric('Max Supplied in a Day (hrs)', f"{supplied_float.max():.2f}")
 
     if view_mode == 'Transposed (summary)':
-        st.subheader(f'Transposed — {selected_feeder}')
+        st.subheader(f'Monthly-Hourly Reading — {selected_feeder}')
         st.dataframe(safe_df_for_display(transposed))
     elif view_mode == 'Raw table':
         st.subheader('Raw filtered table')
@@ -611,3 +611,4 @@ st.markdown("- Add a small forecasting demo (Prophet) for a single feeder.")
 st.markdown("- Add email/Slack alerting for anomaly thresholds.")
 
 st.success('Analysis complete — adjust filters and re-run to explore other feeders or months.')
+
